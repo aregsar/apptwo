@@ -20,14 +20,3 @@ python app.py
 Open a new terminal tab and type:
 
 open http://localhost:3000
-
-
- {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                    <ul>
-                {% for message in messages %}
-                        <li>{{ message }}
-                {% endfor %}
-                </ul>
-            {% endif %}
-        {% endwith%}
