@@ -1,0 +1,26 @@
+<!doctype html>
+<title>apptwo</title>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        age: {{age}}<br />
+        
+        {% if age > 10 %}
+            <a href="{{ url_for('name',name='areg') }}">name</a>
+        {% else %}
+            <a href="{{ url_for('name',name='eric') }}">name</a>
+        {% endif %}
+        
+        
+        {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul>
+                {% for message in messages %}
+                        <li>{{ message }}
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith%}
+    </body>
+</div>
